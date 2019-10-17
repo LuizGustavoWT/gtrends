@@ -6,9 +6,9 @@ module.exports = {
     macroTendendcia(req, res) {
 
         googleTrends.interestByRegion({
-            keyword: req.body.palavrasChave,
-            startTime: new Date('2019-09-15'),
-            endTime: new Date('2019-10-15'),
+            keyword: JSON.parse(req.body.palavrasChave),
+            startTime: new Date(req.body.inicio),
+            endTime: new Date(req.body.fim),
             geo: 'BR',
             hl: 'pt-BR',
             resolution: 'REGION'
@@ -24,9 +24,9 @@ module.exports = {
 
     microTendendcia(req, res) {
         googleTrends.interestByRegion({
-            keyword: req.body.palavrasChave,
-            startTime: new Date('2019-09-15'),
-            endTime: new Date('2019-10-15'),
+            keyword: JSON.parse(req.body.palavrasChave),
+            startTime: new Date(req.body.inicio),
+            endTime: new Date(req.body.fim),
             geo: 'BR',
             hl: 'pt-BR',
             resolution: 'REGION'

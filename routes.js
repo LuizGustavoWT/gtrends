@@ -2,7 +2,7 @@ const express = require('express')
 const routers = express()
 const requests = require('./request');
 
-routers.get('/macrotendencia', requests.macroTendendcia)
-routers.get('/microtendencia', requests.microTendendcia)
+routers.post('/macrotendencia', requests.macroTendendcia)
+routers.post('/microtendencia', requests.microTendendcia)
 
 module.exports = routers;
